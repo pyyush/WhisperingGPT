@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+yum update -y
+yum install git docker polkit -y
+service docker start
+systemctl enable docker
+git clone https://github.com/pyyush/WhisperingGPT.git
+cd WhisperingGPT
+docker build -t whisperinggpt .
+docker run -e OPENAI_API_KEY= -d -p 8000:8000 whisperinggpt
+
