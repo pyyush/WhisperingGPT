@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URL="https://github.com/pyyush/WhisperingGPT"
+URL="https://github.com/pyyush/WhisperingGPT.git"
 DIR="WhisperingGPT"
 
 # Install Docker & Git
