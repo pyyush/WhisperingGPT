@@ -33,7 +33,7 @@ do
     response=$(curl -s http://$PUBLIC_IP:8000)
 
     # Check response status code
-    if [ "$(echo $response | jq -r '.status')" == "success" ]; then
+    if [ "$(echo $response | jq -r '.api_status')" == "OK" ]; then
         echo "WhisperingGPT API is now live at http://$PUBLIC_IP:8000"
         break  # exit the loop if API endpoint is up
     fi
