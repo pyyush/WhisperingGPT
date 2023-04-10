@@ -83,7 +83,7 @@ export SECURITY_GROUP_ID=<security-group-id>
 2. Add your OpenAI API Key by replacing `<your-openai-api-key>` with your API key and \
 run the below command in your terminal from the root of this repo:
 ```sh
-perl -i -pe 's/ENV OPENAI_API_KEY=/ENV OPENAI_API_KEY=<your-openai-api-key>/ if $.==29' Dockerfile
+perl -i -pe 's/export OPENAI_API_KEY=/export OPENAI_API_KEY=<your-openai-api-key>/ if $.==23' install.sh
 ```
 
 3. Run the script as shown below:
@@ -93,4 +93,4 @@ bash deploy.sh
 
 ## License
 
-This project is licensed under the MIT License - see [here](LICENSE) for details.
+This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.

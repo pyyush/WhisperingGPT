@@ -25,9 +25,6 @@ ENV ERROR_LOG=/proc/1/fd/2
 # Expose port 8000
 EXPOSE 8000
 
-# Set OpenAI API Key
-ENV OPENAI_API_KEY=
-
 # Start the server
 ENTRYPOINT /usr/local/bin/gunicorn main:app -b 0.0.0.0:8000 -w 4 -k uvicorn.workers.UvicornWorker --access-logfile "$ACCESS_LOG" --error-logfile "$ERROR_LOG"
 
