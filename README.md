@@ -61,7 +61,7 @@ This will return a JSON response containing the translated text in the target la
 
 ## (Optional) Deploying on EC2 using Docker
 
-A [here](deploy.sh) shell script is provided to deploy the WhisperingGPT API on EC2 inside a Docker container.
+A [deploy.sh](deploy.sh) shell script is provided to deploy the WhisperingGPT API on EC2 inside a Docker container.
 
 ### Requirements
 Before using the script, you need to have the following:
@@ -80,7 +80,8 @@ export KEY_PATH=</path/to/your-ec2-key.pem>
 export SECURITY_GROUP_ID=<security-group-id>
 ```
 
-2. Add your OpenAI API Key by replacing `<your-openai-api-key>` with your API key:
+2. Add your OpenAI API Key by replacing `<your-openai-api-key>` with your API key and \
+run the below command in your terminal from the root of this repo:
 ```sh
 perl -i -pe 's/ENV OPENAI_API_KEY=/ENV OPENAI_API_KEY=<your-openai-api-key>/ if $.==29' Dockerfile
 ```
